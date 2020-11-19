@@ -1,0 +1,170 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+  }
+body,html{
+    margin: 0;
+    padding-top: 100px;
+}
+
+.container{
+    /* width: 100vw;
+    height: 100vh; */
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    margin-top: auto;
+    justify-items: center;
+    align-content: center;
+    grid-template-columns: 100px 100px 100px;
+    /* grid-template-rows: 100px 100px 100px; */
+}
+.cell{
+    border:1px solid black;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3){
+    border-top: none;
+}
+.cell:nth-child(3n+1){
+    border-left: none;
+}
+.cell:nth-child(3n+3){
+    border-right: none;
+}
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9){
+    border-bottom: none;
+}
+.cell.x{
+    align-content: center;
+    justify-content: center;
+}
+
+.cell.x::before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 85px;
+    border: 1px solid black; 
+    background-color: black;
+    transform: rotate(45deg);
+    cursor: not-allowed;
+
+}
+.cell.x::after{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 85px;
+    border: 1px solid black; 
+    background-color: black;
+    transform: rotate(-45deg);
+    cursor: not-allowed;
+}
+.cell.circle::before{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: black;
+    cursor: not-allowed;
+}
+.cell.circle::after{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    cursor: not-allowed;
+}
+
+.just{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 250px;
+    background-color: rgba(0, 0, 0, .9);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5rem;
+    flex-direction: column;
+  }
+.text{
+    text-align: center;
+    
+}
+.knopka {
+    display: block;
+    margin: 0 auto;
+    font-size: 3rem;
+    background-color: white;
+    border: 1px solid black;
+    padding: .25em .5em;
+    cursor: pointer;
+  }
+  
+.knopka:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.just.show{
+    display: block;
+}
+
+
+.container.x .cell:not(.x):not(.circle):hover::before{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 85px;
+    
+    background-color: rgb(156, 144, 144);
+    transform: rotate(45deg);
+    cursor: not-allowed;
+}
+.container.x .cell:not(.x):not(.circle):hover::after{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 85px;
+    background-color: rgb(156, 144, 144);
+    transform: rotate(-45deg);
+    cursor: not-allowed;
+}
+
+.container.circle .cell:not(.x):not(.circle):hover::before{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: rgb(156, 144, 144);
+}
+.container.circle .cell:not(.x):not(.cirlce):hover::after{
+    content: '';
+    position: absolute;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}

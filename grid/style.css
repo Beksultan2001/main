@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(2, 2, 29);
+    user-select: none;
+}
+
+.grid{
+    display: grid;
+    max-width: 360px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 70px 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    background-color: rgb(45, 79, 153);
+    border: 6px solid blue;
+}
+.grid{
+    margin: 0 auto;
+}
+.just{
+    background-color: cornflowerblue;
+    border: 2px solid #212121;
+    border-radius: 7%;
+    padding: 8px 15px;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: roboto;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.just:hover{
+    transform: scale(1.3);
+    background-color: rgb(130, 159, 216);
+}
+
+.main{
+    grid-column: 1/-1;
+    background-color: none;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+}
+.last{
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    text-align: center;
+}
+.ewten{
+    display: block;
+    text-align: none;
+}
+.knopka{
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: grid;
+    max-width: 300px;
+
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+#jok{
+    background-color: rgb(59, 86, 204);
+    text-align: center;
+    font-size: 50px;
+    border-radius: 30%;
+    cursor: pointer;
+}
+#jok:hover{
+    background-color: rgb(30, 226, 226);
+}
+.score{
+    border: 2px solid rgb(6, 6, 78);
+    border-radius: 100%;
+    max-width: 20px; 
+    text-align: center;
+    cursor: auto;
+    
+}
+.common{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 300px;
+    font-size: 30px;
+    grid-column-gap: 20px;
+    margin-bottom: 40px;
+
+}
+#owko1{
+    background-color: green;
+    text-align: center;
+}
+.person{
+    background-color: yellowgreen;
+    
+}
+.lastone{
+    display: block;
+    height: 250px;
+    border-radius: 100%;
+    background-color: cornflowerblue;
+    grid-template-rows: 200px;
+    grid-column: 1/-1;
+    grid-row: 6/9;
+    color: white;
+    font-size: 50px;
+    padding-top: 40%;
+    text-align: center;
+
+}
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="container">
+      <div class="item main"><form name="form" ><input type="text" name= 'textview' readonly></form></div>
+      <div class="item clear" onclick="clea()">C</div>
+      <div class="item back" onclick="backed()">&larr;</div>
+      <div class="item" onclick="mains('+')">+</div>
+      <div class="item" onclick="mains('-')">-</div>
+      <div class="item" onclick="mains('*')">*</div>
+      <div class="item"onclick="mains('/')">/</div>
+      <div class="item"onclick="mains('1')">1</div>
+      <div class="item"onclick="mains('2')">2</div>
+      <div class="item" onclick="mains('3')">3</div>
+      <div class="item" onclick="mains('4')">4</div>
+      <div class="item" onclick="mains('5')">5</div>
+      <div class="item" onclick="mains('6')">6</div>
+      <div class="item" onclick="mains('7')">7</div>
+      <div class="item" onclick="mains('8')">8</div>
+      <div class="item" onclick="mains('9')">9</div>
+      <div class="item" onclick="mains('0')">0</div>
+      <div class="item toshka" onclick="mains('.')">.</div>
+      <div class="item" onclick="mains('(')">(</div>
+      <div class="item" onclick="mains(')')">)</div>
+      <div class="item equal" onclick="last()">=</div>
+   </div>
+   <script>
+       function mains(num){
+           document.form.textview.value = document.form.textview.value + num
+        }
+       function clea(){
+         document.form.textview.value = ''
+        }
+        function backed(){
+            var str = document.form.textview.value;
+            document.form.textview.value = document.form.textview.value.substring(0,str.length-1);
+        }
+        function last(){
+            var str2 = document.form.textview.value;
+            document.form.textview.value = eval(str2);
+        }
+        
+   </script>
+</body>
+</html>

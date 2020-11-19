@@ -1,0 +1,24 @@
+body{
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.list{
+    font-size: 18px;
+}
+.list li{
+    margin: 0px 0px 10px 0px;
+    position: relative;
+    list-style: none;
+    padding: 0px 0px 0px 30px;
+}
+.list li::before{
+    content: '';
+    background: url(lit.png) 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+
+}
